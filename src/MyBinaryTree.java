@@ -22,4 +22,13 @@ public class MyBinaryTree {
 
         return node;
     }
+
+    public int sizeOfBst(Node node){
+        if (node == null)
+            return 0;
+        else
+            return (sizeOfBst(node.leftNode) + sizeOfBst(node.rightNode) + 1 );
+
+    }
+
 }
