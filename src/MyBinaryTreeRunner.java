@@ -1,7 +1,6 @@
 public class MyBinaryTreeRunner {
     public static void main(String[] args) {
         MyBinaryTree bst = new MyBinaryTree();
-        //comment
         Node root = null;
         root = bst.insert(root, 56);
         root = bst.insert(root, 30);
@@ -17,8 +16,11 @@ public class MyBinaryTreeRunner {
         root = bst.insert(root, 67);
         root = bst.insert(root, 63);
 
-
-        int size = bst.sizeOfBst(root);
-        System.out.println("Size of bst is :- "+ size);
+        int key = 63;
+        int flag = bst.search(root, key);
+        if (flag == 1)
+            System.out.println(key + " Is present");
+        else
+            System.out.println(key + " Is not present");
     }
 }

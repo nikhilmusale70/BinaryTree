@@ -1,5 +1,5 @@
 public class MyBinaryTree {
-
+    int flag = 0;
     public Node createNewNode(int key){
         Node n = new Node();
         n.key=key;
@@ -18,7 +18,6 @@ public class MyBinaryTree {
         else if (key> node.key)
             node.rightNode = insert(node.rightNode, key);
 
-
         return node;
     }
 
@@ -28,6 +27,19 @@ public class MyBinaryTree {
         else
             return (sizeOfBst(node.leftNode) + sizeOfBst(node.rightNode) + 1 );
 
+    }
+
+    public int search(Node node, int key){
+        if (node.key == key){
+            flag++;
+        }
+        else if (key > node.key ){
+            search(node.rightNode, key);
+        }
+        else if (key < node.key){
+            search(node.leftNode, key);
+        }
+        return flag;
     }
 
 }
