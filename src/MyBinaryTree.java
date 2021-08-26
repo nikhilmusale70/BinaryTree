@@ -5,7 +5,6 @@ public class MyBinaryTree {
         n.key=key;
         n.leftNode=null;
         n.rightNode=null;
-
         return n;
     }
 
