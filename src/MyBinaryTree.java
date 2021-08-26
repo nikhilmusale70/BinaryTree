@@ -1,7 +1,7 @@
 public class MyBinaryTree {
-
+    public Node n;
     public Node createNewNode(int key){
-        Node n = new Node();
+        n = new Node();
         n.key=key;
         n.leftNode=null;
         n.rightNode=null;
@@ -16,10 +16,12 @@ public class MyBinaryTree {
 
         if (key<node.key)
             node.leftNode = insert(node.leftNode, key);
-        else if (key< node.key)
+        else if (key> node.key)
             node.rightNode = insert(node.rightNode, key);
 
 
         return node;
     }
+
+
 }

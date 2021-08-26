@@ -5,6 +5,8 @@ public class MyBinaryTreeRunner {
         root = bst.insert(root, 56);
         root = bst.insert(root, 30);
         root = bst.insert(root, 70);
+        
+
 
     }
 }
