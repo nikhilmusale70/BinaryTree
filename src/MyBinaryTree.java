@@ -17,7 +17,6 @@ public class MyBinaryTree {
             node.leftNode = insert(node.leftNode, key);
         else if (key> node.key)
             node.rightNode = insert(node.rightNode, key);
-
         return node;
     }
 
